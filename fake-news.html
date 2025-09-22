@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake News Detector - Truth Detector</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-shield-alt"></i>
+          <span>Truth Detector</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fake-news.html" class="active">Fake News</a></li>
+          <li><a href="deepfake.html">Deepfake</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="detector-page">
+      <div class="container">
+        <div class="page-header">
+          <h1><i class="fas fa-newspaper"></i> Fake News Detector</h1>
+          <p>
+            Analyze news articles and text content for potential misinformation
+          </p>
+        </div>
+
+        <div class="detector-container">
+          <div class="input-section">
+            <div class="input-tabs">
+              <button class="tab-btn active" data-tab="text">Text Input</button>
+              <button class="tab-btn" data-tab="url">URL Analysis</button>
+            </div>
+
+            <div class="tab-content active" id="text-tab">
+              <textarea
+                id="newsText"
+                placeholder="Paste your news article or text content here for analysis..."
+                rows="8"
+              ></textarea>
+            </div>
+
+            <div class="tab-content" id="url-tab">
+              <input
+                type="url"
+                id="newsUrl"
+                placeholder="Enter news article URL"
+                class="url-input"
+              />
+            </div>
+
+            <div class="analyze-section">
+              <button id="analyzeBtn" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+                Analyze Content
+              </button>
+            </div>
+          </div>
+
+          <div class="results-section" id="resultsSection">
+            <div class="results-header">
+              <h3>Analysis Results</h3>
+            </div>
+            <div class="results-content" id="resultsContent">
+              <div class="no-results">
+                <i class="fas fa-info-circle"></i>
+                <p>Enter text or URL above to begin analysis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <h3>How it works</h3>
+            <ul>
+              <li>Advanced NLP algorithms analyze content</li>
+              <li>Cross-reference with fact-checking databases</li>
+              <li>Sentiment and bias analysis</li>
+              <li>Source credibility verification</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Detection Indicators</h3>
+            <ul>
+              <li>Emotional language patterns</li>
+              <li>Factual inconsistencies</li>
+              <li>Source reliability</li>
+              <li>Publication date relevance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
